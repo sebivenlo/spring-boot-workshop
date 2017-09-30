@@ -2,14 +2,14 @@
 Spring-Boot Workshop by Merve Sahin
 
 ## During this workshop you will get to learn how to:
-1. bind your Java Models to the client using Thymeleaf
+1. bind your Java Models to the client using **Thymeleaf**
 2. deal with forms using Rest + make ajax calls
-3. enhance security with Spring Security
+3. enhance security with **Spring Security**
 4. deal with HTTP (404) and Server errors
-5. bind and query your database using Spring Data JPA
+5. bind and query your database using **Spring Data JPA**
 6. deal with multiple languages (also number formats)
 7. modify Json conversion
-8. create integration tests with MockMvc
+8. create integration tests with **MockMvc**
 
 ## We will use Netbeans for this workshop.
 ## Before you get started, please make sure you meet these requirements:
