@@ -15,8 +15,8 @@ Spring-Boot Workshop by Merve Sahin
 ## Before you get started, please make sure you meet these requirements:
 
 1. Install the following plugin in Netbeans: `NB Spring Boot`
-2. In case you do not have postgres, please install the latest version.
-3. Create a  database for postgres using the command below in the terminal.  
+2. In case you do not have postgres, please install the latest version <a href="https://www.postgresql.org/download/">here</a>
+3. Create a  database for postgres using the command below.  
 This works well in linux, in case you have Mac or Windows, open your terminal, navigate to the `bin` folder in your PostgreSQL installation path and execute the command.  
 NOTE: make sure to change your username, in case it is not the default `postgres`.      
 `createdb -h localhost -p 5432 -U postgres workshop`
