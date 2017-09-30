@@ -1,5 +1,5 @@
-# spring-boot-workshop
-Spring-Boot Workshop by Merve Sahin
+# Spring-Boot Workshop
+_by Merve Sahin_
 
 ## During this workshop you will get to learn how to:
 - bind your Java Models to the client using **Thymeleaf**
