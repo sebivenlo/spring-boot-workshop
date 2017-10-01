@@ -19,10 +19,14 @@ _by Merve Sahin_
 3. Create a  database for postgres using the command below.  
 This works well in linux, in case you have Mac or Windows, open your terminal, navigate to the `bin` folder in your PostgreSQL installation path and execute the command.  
 NOTE: make sure to change your username, in case it is not the default `postgres`.      
-`createdb -h localhost -p 5432 -U postgres workshop`
+```  
+createdb -h localhost -p 5432 -U postgres workshop  
+```
 4. Now you can pull this workshop. In your Netbeans project go to src/main/resources
    and change username/password in `application.properties` if they differ.
 
 NOTE: After you run your application for the first time, change your `application.properties` file.
 This line will prevent spring from recreating the database each time it is being executed:  
-`spring.datasource.initialize=false`
+```
+spring.datasource.initialize=false
+```
