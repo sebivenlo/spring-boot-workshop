@@ -14,26 +14,26 @@ _by Merve Sahin_
 ## We will use Netbeans for this workshop.
 ## Before you get started, please make sure you meet these requirements:
 
-1. Install the following plugin in Netbeans: `NB Spring Boot`
-2. check whether docker is running:  
-   ```
-   $ docker info
-   ```   
+### 1. Install the following plugin in Netbeans: `NB Spring Boot`
+### 2. check whether docker is running:  
+```bash
+$ docker info
+```
    In case it cannot connect to the Docker daemon execute this in linux:   
-   ```
-   $ sudo service docker start
-   ```   
+```bash
+$ sudo service docker start
+```   
    from windows powershell:    
-   ```
-   restart-service *docker*
-   ```   
+```bash
+restart-service *docker*
+```   
    
-3. build an image from the `Dockerfile` with the following command:    
-   ```bash
-   $ docker build -t spring-boot-workshop .
-   ```   
-4. Run docker image:    
-   ```
-   docker run -p 5433:5432 spring-boot-workshop
-   ```
+### 3. build an image from the `Dockerfile` with the following command:    
+```bash
+$ docker build -t spring-boot-workshop .
+```   
+### 4. Run docker image:    
+```bash
+$ docker run -p 5433:5432 spring-boot-workshop
+```
 
