@@ -15,7 +15,8 @@ _by Merve Sahin_
 ## Before you get started, please make sure you meet these requirements:
 
 ### 1. Install the following plugin in Netbeans: `NB Spring Boot`
-### 2. Check whether docker is running:  
+### 2. We will use Docker to setup the database.  
+   Check whether docker is running:  
 ```bash
 $ docker info
 ```
