@@ -19,11 +19,11 @@ _by Merve Sahin_
 ```bash
 $ docker info
 ```
-   In case it cannot connect to the Docker daemon execute this in linux:   
+   In case it cannot connect to the Docker daemon execute this in **linux**:   
 ```bash
 $ sudo service docker start
 ```   
-   from windows powershell:    
+   from **windows** powershell:    
 ```bash
 restart-service *docker*
 ```   
@@ -34,6 +34,6 @@ $ docker build -t spring-boot-workshop .
 ```   
 ### 4. Run docker image:    
 ```bash
-$ docker run -p 5433:5432 spring-boot-workshop
+$ docker run -p 5443:5432 spring-boot-workshop
 ```
 
