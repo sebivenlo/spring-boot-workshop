@@ -1,2 +1,10 @@
-sebivenlo/workshop/AppConfig.class
+sebivenlo/workshop/configuration/AppConfig.class
+sebivenlo/workshop/repository/BaseRepository.class
+sebivenlo/workshop/security/SecurityConfiguration.class
+sebivenlo/workshop/service/AccountService.class
+sebivenlo/workshop/controller/AccountController.class
+sebivenlo/workshop/controller/AccountController$StudentDTO.class
 sebivenlo/workshop/Application.class
+sebivenlo/workshop/repository/AccountRepository.class
+sebivenlo/workshop/entity/UserRole.class
+sebivenlo/workshop/entity/Account.class

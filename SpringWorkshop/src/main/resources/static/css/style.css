@@ -1,0 +1,79 @@
+/* 
+    Author     : merve
+*/
+#logo{
+    margin-top: 100px;
+}
+
+#login-form{
+    width:100%;
+    margin-top: 100px;
+    position: absolute;
+
+}
+
+#table{
+    width:30%;
+    margin:auto;
+    position: relative;
+    font-size: xx-large;   
+}
+
+/*#table2 > td{
+     font-size: medium;
+}*/
+
+#table2{
+    width:70%;
+    height: 70%;
+    margin:auto;
+    position: relative;
+    font-size: large; 
+    /*border-spacing: 50px;*/
+    border-collapse: collapse;
+}
+
+#table2, th, td{
+    border: 1px solid #c7ced8;
+    font-family: sans-serif;
+}
+
+#table2 th{
+    height: 100px;
+    padding: 15px;
+    font-size: larger;
+}
+
+#table2 td{
+    height: 35px;
+    padding: 15px;
+}
+
+#table2 tr:hover {
+    background-color: #f2f2f2;
+}
+
+#table2 tr:nth-child(even) {
+    background-color: #dfeff6;
+}
+
+.input_box_large{
+    height: 40px;
+    width: 300px;
+}
+
+#submit{
+    height: 3em;
+    width: 9em;
+    font-size: large;    
+}
+
+p{
+    font-family: "Sans Serif";
+}
+
+#title{
+    font-size: xx-large;
+    text-align: center;
+    padding: 50px;
+}

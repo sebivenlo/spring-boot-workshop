@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Spring Workshop</title>
+        <link th:href="@{/css/style.css}" href="../static/css/style.css" rel="stylesheet"></link>
+        <meta charset="UTF-8"></meta>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+        <!--<script th:src="@{/js/login.js}"></script>-->
+    </head>
+    <body>
+        <center>
+            <img id="logo" src="http://blog.scottlogic.com/bjedrzejewski/assets/spring-boot.png" ></img>
+        </center>
+
+        <!-- 
+            TODO 1.6.0: define method, th:action(url-mapping) and object(provided by Model)
+        -->
+        <form id="login-form" method="post" action="#" th:action="@{/account/login}" th:object="${account}">
+
+            <table id="table">
+                <tr>
+                    <td>
+                        <p>Email:</p>
+                    </td>
+                    <td>
+                        <input class="input_box_large" type="text" th:field="*{mail}"></input>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Password:</p>
+                    </td>
+                    <td>
+                        <input class="input_box_large" type="text" th:field="*{password}"></input>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <p> <input id="submit" type="submit" value="submit"></input> </p>
+                    </td>
+                </tr>
+
+            </table>
+        </form>
+    </body>
+</html>

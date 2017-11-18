@@ -1,56 +1,67 @@
--- recreate
+-- drop
 
-DROP TABLE IF EXISTS PROGRAM_COURSES;
-DROP TABLE IF EXISTS ACCOUNT;
-DROP TABLE IF EXISTS STUDENT;
-DROP TABLE IF EXISTS DEGREE ;
-DROP TABLE IF EXISTS COURSE;
-DROP TABLE IF EXISTS STUDY_PROGRAM;
+DROP TABLE IF EXISTS USER_ADMIN CASCADE;
+DROP TABLE IF EXISTS ACCOUNT CASCADE;
+DROP TABLE IF EXISTS USER_STUDENT CASCADE;
+DROP TABLE IF EXISTS COURSE CASCADE;
 
--- schema
+DROP TABLE IF EXISTS STUDY_PROGRAM CASCADE;
+DROP TABLE IF EXISTS DEGREE CASCADE;
+DROP TABLE IF EXISTS USER_ROLE CASCADE;
 
-CREATE TABLE DEGREE(
-ID serial primary key,
-DEGREE varchar(80)
-);
+-- create
 
-CREATE TABLE COURSE(
-ID serial primary key,
-COURSE varchar(100),
-CREDIT int,
-SEMESTER int
-);
-
-CREATE TABLE STUDY_PROGRAM(
-ID serial primary key,
-STUDY_PROGRAM varchar(100)
-);
-
-CREATE TABLE STUDENT(
-ID serial primary key,
-NAME varchar(20),
-SURNAME varchar(20),
-FULL_TIME bool,
-ENROL_YEAR int,
-SEMESTER int,
-DEGREE_ID int,
-STUDY_PROG_ID int,
-foreign key (DEGREE_ID) references DEGREE(ID),
-foreign key (STUDY_PROG_ID) references STUDY_PROGRAM(ID)
-);
-
-CREATE TABLE PROGRAM_COURSES(
-ID serial primary key,
-PROGRAM_ID int, 
-COURSE_ID int,
-foreign key (PROGRAM_ID) references STUDY_PROGRAM(ID),
-foreign key (COURSE_ID) references COURSE(ID)
+CREATE TABLE USER_ROLE(
+    ID SERIAL PRIMARY KEY,
+    ROLE VARCHAR(30)
 );
 
 CREATE TABLE ACCOUNT(
-ID serial primary key,
-STUDENT_ID int,
-MAIL varchar(70),
-PASSWORD varchar(50),
-foreign key (STUDENT_ID) references STUDENT(ID)
+    ID serial primary key,
+    MAIL varchar(70),
+    PASSWORD varchar(50),
+    ROLE_ID int,
+    foreign key (ROLE_ID) references USER_ROLE (ID)
+);
+
+CREATE TABLE USER_ADMIN(
+    ID SERIAL PRIMARY KEY,
+    ACCOUNT_ID INT,
+    NAME VARCHAR(20),
+    SURNAME VARCHAR(20),
+    FOREIGN KEY (ACCOUNT_ID) REFERENCES ACCOUNT(ID)
+);
+
+CREATE TABLE DEGREE(
+    ID serial primary key,
+    DEGREE varchar(80)
+);
+
+CREATE TABLE STUDY_PROGRAM(
+    ID serial primary key,
+    STUDY_PROGRAM varchar(100)
+);
+
+CREATE TABLE COURSE(
+    ID serial primary key,
+    COURSE varchar(100),
+    CREDIT int,
+    SEMESTER int,
+    STUDY_PROG_ID int,
+    foreign key (STUDY_PROG_ID) references STUDY_PROGRAM(ID)
+);
+
+CREATE TABLE USER_STUDENT(
+    ID serial primary key,
+    ACCOUNT_ID int,
+    NAME varchar(20),
+    SURNAME varchar(20),
+    FULL_TIME bool,
+    ENROL_YEAR int,
+    SEMESTER int,
+    DEGREE_ID int,
+    STUDY_PROG_ID int,
+    foreign key (ACCOUNT_ID) references ACCOUNT(ID),
+    foreign key (DEGREE_ID) references DEGREE(ID),
+    foreign key (STUDY_PROG_ID) references STUDY_PROGRAM(ID)
 );
