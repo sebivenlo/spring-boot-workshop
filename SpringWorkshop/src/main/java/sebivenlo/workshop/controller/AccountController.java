@@ -47,7 +47,7 @@ public class AccountController {
      * @return home.html if user exists otherwise index.html
      */
     //TODO 1.5.2 put annotation HINT: argument needs to be annotated as well
-    public String login(@Valid @ModelAttribute AccountDTO account, Model model) {
+    public String login(AccountDTO account, Model model) {
         if (accountService.hasUser(account.getMail(), account.getPassword())) {
             
             //TODO 2.4.0: retrieve students from the StudentService
