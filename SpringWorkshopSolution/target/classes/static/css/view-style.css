@@ -1,0 +1,53 @@
+/* 
+    Author     : merve
+*/
+.table2{
+    width:70%;
+    height: 70%;
+    margin:auto;
+    position: relative;
+    font-size: large; 
+    /*border-spacing: 50px;*/
+    border-collapse: collapse;
+}
+
+.table2, th, td{
+    border: 1px solid #c7ced8;
+    font-family: sans-serif;
+}
+
+.table2 th{
+    height: 100px;
+    padding: 15px;
+    font-size: larger;
+}
+
+.table2 td{
+    height: 35px;
+    padding: 15px;
+}
+
+.bold{
+    font-size: 25px;
+}
+
+#title{
+    text-align: center;
+    font-size: 35px;
+    padding: 35px;
+}
+
+.input_box{
+    width: 90%;
+    height : 90%;
+    text-align: center;
+    font-size: 25px;
+}
+
+#save_button{
+    margin-top: 15px;
+    padding: 10px;
+    width: 25%;
+    margin-left: 37.5%;
+    margin-right: 37.5%;
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>View</title>
+        <link th:href="@{/css/view-style.css}" href="../static/css/style.css" rel="stylesheet"></link>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+    <body>
+        <div id="title" th:text="${student.surname} +', '+ ${student.name}" ></div>
+        <table class="table2">
+            <tr>
+                <td class="bold" >Full-Time</td>
+                <td th:text="${student.fullTime}" ></td>
+            </tr>
+            <tr>
+                <td class="bold">Year Enrolled</td>
+                <td th:text="${student.enrolYear}" ></td>
+            </tr>
+            <tr>
+                <td class="bold">Semester</td>
+                <td th:text="${student.semester}" ></td>
+            </tr>
+            <tr>
+                <td class="bold">Degree</td>
+                <td th:text="${student.degree}" ></td>
+            </tr>
+            <tr>
+                <td class="bold">Study Program</td>
+                <td th:text="${student.studyProgram}" ></td>
+            </tr>
+        </table>
+        
+        <table class="table2">
+            <tr>
+                <th>Id</th>
+                <th>Course</th>
+                <th>Credit</th>
+            </tr>
+            <tr th:each="course : ${courses}" >
+                
+                <td th:text="${course.id}" ></td>
+                <td th:text="${course.course}" ></td>
+                <td th:text="${course.credit}" ></td>
+                
+            </tr>
+        </table>
+    </body>
+</html>
