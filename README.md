@@ -10,16 +10,15 @@ _by Merve Sahin_
 - bind and query your database using **Spring Data JPA**
 - create integration tests with **MockMvc**
 
-## We will use Netbeans for this workshop.
-## Before you get started, please make sure you meet these requirements:
+## Prerequisites:
 
-### 1. Install the following plugin in Netbeans: `NB Spring Boot`
-### 2. We will use Docker to setup the database.  
+#### 1. Install the following plugin in Netbeans: `NB Spring Boot`
+#### 2. We will use Docker to setup the database.  
    Check whether docker is running:  
 ```bash
 $ docker info
 ```
-   In case it cannot connect to the Docker daemon execute this in **Linux**:   
+   In case it cannot connect to the Docker daemon, start the service in **Linux**:   
 ```bash
 $ sudo service docker start
 ```   
@@ -31,11 +30,11 @@ restart-service *docker*
 ```bash
 $ docker-machine start
 ```  
-### 3. Build an image from the `Dockerfile` with the following command:    
+#### 3. Build an image from the `Dockerfile` with the following command:    
 ```bash
 $ docker build -t spring-boot-workshop .
 ```   
-### 4. Run docker image:    
+#### 4. Run docker image:    
 ```bash
 $ docker run -p 5443:5432 spring-boot-workshop
 ```
