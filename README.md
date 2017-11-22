@@ -1,6 +1,8 @@
 # Spring-Boot Workshop
 _by Merve Sahin_
 
+## <a href="https://github.com/sebivenlo/spring-boot-workshop/blob/master/slides.pdf">Slides</a>
+
 ## During this workshop you will get to learn how to:
 - bind your Java Models to the client using **Thymeleaf**
 - deal with forms using Rest + make ajax calls
