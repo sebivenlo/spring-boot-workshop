@@ -5,10 +5,7 @@ _by Merve Sahin_
 - bind your Java Models to the client using **Thymeleaf**
 - deal with forms using Rest + make ajax calls
 - enhance security with **Spring Security**
-- deal with HTTP (404) and Server errors
 - bind and query your database using **Spring Data JPA**
-- deal with multiple languages (also number formats)
-- modify Json conversion
 - create integration tests with **MockMvc**
 
 ## We will use Netbeans for this workshop.
