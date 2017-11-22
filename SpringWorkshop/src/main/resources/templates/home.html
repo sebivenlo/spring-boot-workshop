@@ -48,21 +48,30 @@
                 TODO 2.1.0: iterate through the array and fill the row 
             -->
 
-            <tr th:each="student : ${students}" >
-                <td th:text="${student.name}"></td>
-                <td th:text="${student.surname}"></td>
-                <td th:text="${student.fullTime}"></td>
-                <td th:text="${student.enrolYear}"></td>
-                <td th:text="${student.semester}"></td>
-                <td th:text="${student.degree}"></td>
-                <td th:text="${student.studyProgram}"></td>
-                <td>
-                    <form action="#" th:action="@{'/student/secured/edit/'+ ${student.id} }" >
+            <tr th:each=" : " >
+                <!--name-->
+                <td th:text=""></td> 
+                <!--surname-->
+                <td th:text=""></td>
+                <!--fullTime-->
+                <td th:text=""></td>
+                <!--enrolYear-->
+                <td th:text=""></td>
+                <!--semester-->
+                <td th:text=""></td>
+                <!--degree-->
+                <td th:text=""></td>
+                <!--studyProgram-->
+                <td th:text=""></td>
+                <td>                                                        
+                                                                    <!--replace '?' with student id-->
+                    <form action="#" th:action="@{'/student/secured/edit/'+  ?  }" >
                         <input type="submit" value="Edit" ></input>
                     </form>
                 </td>
                 <td>
-                    <form action="#" th:action="@{'/student/secured/view/'+ ${student.id} }" >
+                                                                    <!--replace '?' with student id-->
+                    <form action="#" th:action="@{'/student/secured/view/'+   ?   }" >
                         <input type="submit" value="View" ></input>
                     </form>
                 </td>
