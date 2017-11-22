@@ -2,9 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
     <head>
         <title>Home</title>
-        <link th:href="@{/css/style.css}" href="../static/css/style.css" rel="stylesheet"></link>
+        <link th:href="@{/css/home-style.css}" href="../static/css/style.css" rel="stylesheet"></link>
         <meta charset="UTF-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <script src="/webjars/jquery/2.0.3/jquery.min.js"></script>
+        <script src="/webjars/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+       
     </head>
     <body>
         <div id="title">
@@ -40,11 +43,11 @@
                     View
                 </th>
             </tr>
-            
+
             <!-- 
                 TODO 2.1.0: iterate through the array and fill the row 
             -->
-            
+
             <tr th:each="student : ${students}" >
                 <td th:text="${student.name}"></td>
                 <td th:text="${student.surname}"></td>
@@ -54,10 +57,14 @@
                 <td th:text="${student.degree}"></td>
                 <td th:text="${student.studyProgram}"></td>
                 <td>
-                    <input type="button" value="edit" ></input>
+                    <form action="#" th:action="@{'/student/secured/edit/'+ ${student.id} }" >
+                        <input type="submit" value="Edit" ></input>
+                    </form>
                 </td>
                 <td>
-                    <input type="button" value="view" ></input>
+                    <form action="#" th:action="@{'/student/secured/view/'+ ${student.id} }" >
+                        <input type="submit" value="View" ></input>
+                    </form>
                 </td>
             </tr>
         </table>

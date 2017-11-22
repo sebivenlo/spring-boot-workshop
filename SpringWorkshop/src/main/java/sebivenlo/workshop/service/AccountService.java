@@ -1,5 +1,6 @@
 package sebivenlo.workshop.service;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import sebivenlo.workshop.repository.AccountRepository;
 
@@ -11,7 +12,7 @@ import sebivenlo.workshop.repository.AccountRepository;
 @Service
 public class AccountService {
 
-    //TODO 1.4.0: put annotation
+    //TODO 1.4.0: apply dependency injection here
     private AccountRepository accountRepository;
 
     /**

@@ -1,5 +1,6 @@
 package sebivenlo.workshop.repository;
 
+import java.util.Optional;
 import org.springframework.stereotype.Repository;
 import sebivenlo.workshop.entity.Account;
 
@@ -11,6 +12,8 @@ import sebivenlo.workshop.entity.Account;
 @Repository
 public interface AccountRepository extends BaseRepository<Account>{
     
-    //TODO 1.3.0: define method for querying accounts by mail and password. 
+    //TODO 1.3.0: define method for querying accounts by mail
     //HINT: method name is relevant, check documentation
+
+    //Optional<Account> ??
 }
