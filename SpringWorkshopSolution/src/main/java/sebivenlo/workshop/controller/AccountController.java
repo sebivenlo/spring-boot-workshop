@@ -64,11 +64,9 @@ public class AccountController {
 
     private List<StudentDTO> getStudents() {
         List<StudentDTO> students = new ArrayList<>();
-        students.add(new StudentDTO(1, "Merve", "Sahin", 2014, true, 7, "Bachelor of Science", "Software Engineering"));
-        students.add(new StudentDTO(2, "Elif", "Sahin", 2017, true, 3, "Bachelor of Science", "Logistics"));
-        students.add(new StudentDTO(3, "Mazlum", "Sahin", 2016, true, 1, "Bachelor of Engineering", "Mechanics"));
-        students.add(new StudentDTO(4, "Meryem", "Sahin", 2010, true, 8, "Bachelor of Business Administration", "International Business and Management"));
-        students.add(new StudentDTO(5, "John", "Doe", 2010, true, 8, "Bachelor of Business Administration", "International Business and Management"));
+        students.add(new StudentDTO(1, "Annie", "Edison", 2014, true, 7, "Bachelor of Science", "Software Engineering"));
+        students.add(new StudentDTO(2, "James", "Scott", 2017, true, 3, "Bachelor of Science", "Logistics"));
+        students.add(new StudentDTO(3, "John", "Doe", 2010, true, 8, "Bachelor of Business Administration", "International Business and Management"));
 
         return students;
     }
